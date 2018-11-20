@@ -22,7 +22,7 @@
                                 <rect key="frame" x="110.5" y="318.5" width="154" height="30"/>
                                 <state key="normal" title="Show me the life cycle"/>
                                 <connections>
-                                    <segue destination="Ixb-Ry-Ebk" kind="show" id="gNK-Mp-lE2"/>
+                                    <segue destination="Ixb-Ry-Ebk" kind="show" id="Muz-Nh-RYU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -39,26 +39,23 @@
             </objects>
             <point key="canvasLocation" x="1024.8" y="132.68365817091455"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Middle View Controller-->
         <scene sceneID="ayT-JD-344">
             <objects>
-                <viewController id="Ixb-Ry-Ebk" customClass="SecondViewController" sceneMemberID="viewController">
+                <viewController id="Ixb-Ry-Ebk" customClass="MiddleViewController" customModule="OrderOfEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ifd-4v-iJV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU2-Z6-TbK">
-                                <rect key="frame" x="125" y="602" width="125" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="145.5" y="602" width="84" height="30"/>
+                                <state key="normal" title="Next Screen"/>
                                 <connections>
                                     <segue destination="mIR-hM-87z" kind="show" id="eaF-0F-EcV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nothing has happened yet" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Si-SH6">
-                                <rect key="frame" x="62.5" y="99" width="250" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="Act-zB-HgC"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvn-Si-SH6">
+                                <rect key="frame" x="187.5" y="99" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -68,13 +65,14 @@
                         <constraints>
                             <constraint firstItem="dvn-Si-SH6" firstAttribute="centerX" secondItem="Ifd-4v-iJV" secondAttribute="centerX" id="EaU-RX-lhK"/>
                             <constraint firstItem="dvn-Si-SH6" firstAttribute="top" secondItem="a2U-zt-bYv" secondAttribute="top" constant="35" id="LTQ-Jb-9qV"/>
-                            <constraint firstItem="a2U-zt-bYv" firstAttribute="trailing" secondItem="fU2-Z6-TbK" secondAttribute="trailing" constant="125" id="Xru-Rd-Y7y"/>
                             <constraint firstItem="a2U-zt-bYv" firstAttribute="bottom" secondItem="fU2-Z6-TbK" secondAttribute="bottom" constant="35" id="gvm-rH-N6h"/>
                             <constraint firstItem="fU2-Z6-TbK" firstAttribute="centerX" secondItem="Ifd-4v-iJV" secondAttribute="centerX" id="nIp-GE-IDc"/>
-                            <constraint firstItem="fU2-Z6-TbK" firstAttribute="leading" secondItem="a2U-zt-bYv" secondAttribute="leading" constant="125" id="tfs-0D-S78"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="a2U-zt-bYv"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="dvn-Si-SH6" id="WsI-jf-Raw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UZh-fC-QUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go back and see if anything happened" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ic7-kt-kRn">
-                                <rect key="frame" x="40.5" y="99" width="294" height="21"/>
+                                <rect key="frame" x="40.5" y="323" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -97,8 +95,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ic7-kt-kRn" firstAttribute="centerY" secondItem="seg-pB-Pfr" secondAttribute="centerY" id="f45-I6-s9W"/>
                             <constraint firstItem="ic7-kt-kRn" firstAttribute="centerX" secondItem="seg-pB-Pfr" secondAttribute="centerX" id="iVQ-G8-9fp"/>
-                            <constraint firstItem="ic7-kt-kRn" firstAttribute="top" secondItem="kJX-RZ-gku" secondAttribute="top" constant="35" id="kq2-w4-2E2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kJX-RZ-gku"/>
                     </view>
